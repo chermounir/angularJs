@@ -1,0 +1,76 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "completada": true,
+      "descripcion": "Tomar cafe a las 11:00"
+    },
+    {
+      "completada": false,
+      "descripcion": "Mirar como no revcargar la pagina",
+      "id": 10
+    },
+    {
+      "completada": false,
+      "descripcion": "checkbutton alado de la tarea para marcar si esta o no terminada",
+      "id": 12
+    },
+    {
+      "completada": false,
+      "descripcion": "filtrar tareas por nombre",
+      "id": 13
+    },
+    {
+      "completada": false,
+      "descripcion": "filtrar por completadas o No compleatdas",
+      "id": 14
+    },
+    {
+      "completada": false,
+      "descripcion": "entender lo que escribooooooooooo",
+      "id": 15
+    },
+    {
+      "completada": false,
+      "descripcion": "asdfasd asdfasdf",
+      "id": 16
+    },
+    {
+      "completada": false,
+      "descripcion": "Mirar como no revcargar la pagina",
+      "id": 17
+    },
+    {
+      "completada": false,
+      "descripcion": "Mirar como no revcargar la pagina",
+      "id": 18
+    },
+    {
+      "completada": false,
+      "descripcion": "Mirar como no revcargar la pagina",
+      "id": 19
+    },
+    {
+      "completada": false,
+      "descripcion": "Mirar como no revcargar la pagina",
+      "id": 20
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

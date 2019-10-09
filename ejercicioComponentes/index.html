@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="componentesApp">
+<!-- directiva para decir que es un App de Angular -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- angular js -->
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="components/boton/componente-boton.js"></script>
+    
+    <script src="components/calicificacion/componente-calicificacion.js"></script>
+    <script src="js/componente-saludar.js"></script>
+    <script src="js/phone-list.component.js"></script>
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Ejercicio Componente</h1>
+
+      <a href="https://docs.angularjs.org/tutorial/step_03" target="_blank">tutorial Oficial</a>
+      <a href="https://docs.angularjs.org/guide/component" target="_blank">Documentacion Oficial</a>
+      <p>En este artículo estudiaremos algunas diferencias entre componentes y directivas y veremos cómo realizar un componente sencillo, de modo que nuestra aplicación Angular sea capaz de conocer nuevas etiquetas de HTML. </p>
+      <p>en la práctica los componentes además nos permiten extender el HTML de otra manera, creando nuevas etiquetas completas que podremos incorporar y que esconden dentro sus propias complejidades, permitiendo una mayor reutilización y manteniendo encapsulada su complejidad.</p>
+<h2>Crear componentes básicos:</h2>
+<code>angular.
+         module('componentesApp').// nombre App
+        <br> component('componenteCalicificacion', {// nombre componente => para usarlo <saludoUsuario></saludoUsuario>
+         <br> templateUrl: './components/calicificacion/template.html',
+         <br> controller: function CalificacionController() {
+            <br>  this.nombre = 'suspenso';
+            <br>  this.contador=0;
+            <br> }</code>
+          <p>Lo importante que tienes que observar del código anterior:</p>
+
+          <p>- Usamos el método component() para definir el componente. Ese método recibe el nombre del componente y el objeto que lo define.</p>
+          <p>- El nombre del componente que pasamos a la función component debe estar escrito en "camel case", si es que está compuesto por varias palabras. Pero luego veremos que en el HTML nos referimos al componente separando las palabras por guiones.</p>
+          <p>- En el objeto enviado al componente le indicamos el atributo "template" que tiene el HTML del marcado del componente. Luego veremos que existe un atributo llamado "templateUrl" que es más interesante por contener una ruta para un archivo HTML donde colocaremos el marcado de manera separada.</p>
+
+      <p>Nustro primer componente:</p>
+<saludo-usuario></saludo-usuario>
+<p>Nuestro segundo componente</p>
+<componente-boton></componente-boton>
+
+<div class="row">
+            <div class="col" >
+            
+                    <p><h2>Calicificaciones Pepe</h2></p>
+                    <table class="table">
+                            <thead>
+                                    <tr >
+                                      <th class="text-left" scope="col">Technologia</th>
+                                      <th  class="text-left" scope="col">Nota</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                    <tr>
+                                        <td>HTML</td>
+                                        <td><componente-calicificacion pnota="3"></componente-calicificacion></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CSS</td>
+                                        <td><componente-calicificacion pnota="4"></componente-calicificacion></td>
+                                    </tr>
+                                    <tr>
+                                        <td>JS</td>
+                                        <td><componente-calicificacion pnota="5"></componente-calicificacion></td>
+                                    </tr>
+                                    <tr>
+                                        <td>AngularJs</td>
+                                        <td><componente-calicificacion pnota="6"></componente-calicificacion></td>
+                                    </tr>
+
+                                </tbody>   
+                            </li>
+                    </table>
+            </div>
+
+    </div>  
+
+    <hr>
+    <h2>Listado telefonos</h2>
+    <phone-list></phone-list>
+
+
+
+
+    </main> 
+</body>
+
+</html>
