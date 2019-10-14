@@ -1,43 +1,59 @@
-var app = angular.module('angularApp',['ngRoute']);
+var app = angular.module('angularApp',['ngRoute','ngSanitize']);
 
 app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
 
-  $scope.menuSuperior = "parciales/menu.html";
+  this.$onInit = function(){
 
-  $scope.rutas = [
-    {
-      "nombre": "Inicio",
-      "url": "#!/",
-      "active": false
-    },
-    {
-      "nombre": "Profesores",
-      "url": "#!/profesores",
-      "active": true
-    },
-    {
-      "nombre": "Componente Boton dentro de HTML",
-      "url": "#!/componente1",
-      "active": false
-    },
-    {
-      "nombre": "Componente Boton sin html",
-      "url": "#!/componente2",
-      "active": false
-    },
-    {
-      "nombre": "Creditos",
-      "url": "#!/creditos",
-      "active": false
-    }
-  ];
+    console.log('onInit mainCtrl');
+    
+    $scope.alerta = {
+      "texto" : "Ongi Etorri",
+      "clase" : "primary"
+    };
 
-  $scope.cambiarActivo = function( ruta ){
-    console.trace('click cambiarActivo %o', ruta);
-    $scope.rutas.forEach(element => {
-      element.active = false;
+
+    // check para saber si esta el servicio rest levantado
+    let url = 'http://localhost:3000/frutas';
+    $http.get(url).then(function (result) {
+        console.trace('servicio rest funcionando %o', result);
+        $scope.alerta = {
+          "texto" : "<strong>Yujuuuuu</strong> Esta funcionando Servicio Rest",
+          "clase" : "success"
+        };
+
+
+    }).catch(function (response) {
+        console.warn('servicio rest fallando %o', response);
+        $scope.alerta = {
+          "texto" : "<strong>Upssssss</strong> Servicio Rest parado",
+          "clase" : "danger"
+        };
     });
-    ruta.active = true;
-  }
+
+    
+
+  }//onInit
+
+
+
+
+
+//$scope.setActive("mFrutas");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }]);

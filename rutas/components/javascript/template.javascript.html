@@ -1,0 +1,44 @@
+<h1>Filter Map Reduce</h1>
+
+<div class="row">
+    <div class="rol-3 p-1 border">
+        <h4>Filter:</h4>
+        <p>El método filter() crea un nuevo array <br>
+            con todos los elementos que cumplan la <br>
+            condición implementada por la función dada.</p>
+        <img width="370px" src="images/filter.gif" alt="">
+        <br>
+        <h4>Ejemplo:</h4>
+        <code>$scope.nombr2e  = <br>response.data.filter(e=>e.precio>2);</code>
+        <h4>Resultado:</h4>
+        <p>array de frutas con precio >2</p>
+        {{nombr2e}}
+    </div>
+    <div class="rol-3 p-1 border">
+        <h4>Map:</h4>
+        <p>El método map() crea un nuevo array con <br>
+            los resultados de la llamada a la función<br>
+             indicada aplicados a cada uno de sus elementos.</p>
+        <img  width="370px" src="images/map.gif" alt="">
+        <br>
+        <h4>Ejemplo:</h4>
+        <code>$scope.colores  = <br>response.data.map(e=>e.color);</code>
+        <h4>Resultado:</h4>
+        <p>array de colores</p>
+        {{colores}}
+    </div>
+    <div class="rol-3 p-1 border">
+        <h4>Reduce:</h4>
+        <p>El método reduce() ejecuta una función reductora<br>
+             sobre cada elemento de un array, devolviendo <br>
+             como resultado un único valor.</p>
+        <img  width="370px" src="images/reduce.gif" alt="">
+        <br>
+        <h4>Ejemplo:</h4>
+        <code>  $scope.totalEuros  = <br>response.data.map(e=>e.precio)<br>.reduce((pv,cv)=> pv+cv);</code>
+        <h4>Resultado:</h4>
+        <p>Suma total</p>
+        {{totalEuros}}
+    </div>
+</div>
+

@@ -1,0 +1,42 @@
+<h1>Frutas</h1>
+
+
+<div class="border p-2 mb-2 bg-light">
+    <h2>Filtro por Color</h2>
+    <select class="form-control" ng-model="color">
+        <option value="verde">verde</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="marron">Marron</option>
+    </select>
+</div>
+
+<div class="border p-2 mb-2 bg-light">
+    <h2>Filtro</h2>
+    <i class="fas fa-search"></i>  <input type="text" ng-model="busqueda.nombre"  placeholder="Nombre de la fruta" size="40">
+    </div>
+<h2>Listado de frutas</h2>
+<div class="row">
+    <table class="table table-striped">
+        <tr>
+            <th>Id </th>
+            <th ng-click="columna = 'nombre'; orden = !orden;">Nombre<i class="fas fa-sort-up" ></i></th>
+            <th ng-click="columna = 'color'; orden = !orden;">Color<i class="fas fa-sort-down"></i></th>
+            <th ng-click="columna = 'precio'; orden = !orden;">Precio<i class="fas fa-sort-up"></i></th>
+        </tr>
+        <tr ng-repeat="fruta in frutas | filter:busqueda | orderBy:columna:orden|limitTo:posicion|limitTo:-2">
+            <td>{{fruta.id}}</td>
+            <td>{{fruta.nombre}}</td>
+            <td>{{fruta.color}}</td>
+            <td>{{fruta.precio}}</td>
+        </tr>
+        
+    </table>
+</div>
+
+<div class="border p-2 mb-2 bg-light">
+<button class="btn btn-primary" ng-click="anteriores()">Anteriores</button>
+<button class="btn btn-primary" ng-click="siguientes()">Siguientes</button>
+{{colores}}
+{{nombr2e}}
+{{totalEuros}}
+</div>
