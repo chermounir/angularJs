@@ -20,9 +20,9 @@
     <table class="table table-striped">
         <tr>
             <th>Id </th>
-            <th ng-click="columna = 'nombre'; orden = !orden;">Nombre<i class="fas fa-sort-up" ></i></th>
-            <th ng-click="columna = 'color'; orden = !orden;">Color<i class="fas fa-sort-down"></i></th>
-            <th ng-click="columna = 'precio'; orden = !orden;">Precio<i class="fas fa-sort-up"></i></th>
+            <th ng-click="columna = 'nombre'; orden = !orden; click1 = !click1;">Nombre<i ng-class="(click1)?'fas fa-sort-up':'fas fa-sort-down'" ></i></th>
+            <th ng-click="columna = 'color'; orden = !orden; click2 = !click2;">Color<i ng-class="(click2)?'fas fa-sort-up':'fas fa-sort-down'"></i></th>
+            <th ng-click="columna = 'precio'; orden = !orden; click3 = !click3;">Precio<i ng-class="(click3)?'fas fa-sort-up':'fas fa-sort-down'"></i></th>
         </tr>
         <tr ng-repeat="fruta in frutas | filter:busqueda | orderBy:columna:orden|limitTo:posicion|limitTo:-2">
             <td>{{fruta.id}}</td>
