@@ -7,9 +7,8 @@
 				<li>
 					ejercicio1:
 					<ul>
-						<li>Filtros: uppercase, lowercasee, date, numbre, currency.</li>
+						<li>Filtros:uppercase, lowercasee, date, numbre, currency.</li>
 						<li>Directiva ng-model</li>
-					</ul>
 					
 				</li>
 				<li>ejercicio2:Directiva ng-repeat</li>
