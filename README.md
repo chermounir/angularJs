@@ -6,9 +6,9 @@
 			<ul>
 				<li>
 					ejercicio1:
-					<ul>
-						<li>Filtros:uppercase, lowercasee, date, numbre, currency.</li>
-						<li>Directiva ng-model</li>
+				 <ul>
+					<li>Filtros:uppercase, lowercasee, date, numbre, currency.</li>
+				    <li>Directiva ng-model</li>
 					
 				</li>
 				<li>ejercicio2:Directiva ng-repeat</li>
@@ -25,3 +25,20 @@
 		<li>filtro personalizado:Crear filtro personalizado</li>
 	
 	</ul>
+<h2>Frutas:</h2>
+filtrar una tabla de frutas por nombre y color
+<h2>Componentes</h2>
+<h2>Creditos</h2>
+<h2>Filter, Map, Reduce</h2>
+<h2>Contratos</h2>
+<h2>Promesas</h2>
+<h2>Servicios</h2>
+<h2>Crud</h2>
+<h2>Formulario</h2>
+<h2>Pokemon</h2>
+	
+       
+		
+		
+		
+		
