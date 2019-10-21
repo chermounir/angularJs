@@ -1,0 +1,101 @@
+<h1>Detalle {{name}}</h1>
+<div class="border p-2 mb-2 bg-light">
+        <h2>Filtro</h2>
+            <br>
+            <input type="text" ng-model="busqueda.move.name"  placeholder="Nombre del move" size="40">
+            
+        </div>
+<div class="row">
+        <div class="col-3" >
+            <div class="card">
+                    <img ng-src="{{pokemons1.sprites.back_default}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{name}}</h5>
+                      <p class="card-text">Peso:{{pokemons1.weight}}</p>
+                      <p class="card-text">Altura:{{pokemons1.height}}</p>
+                    </div>
+            </div>
+        </div>
+
+    <div class="col">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">types</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="po in pokemons1.types">
+                        <td>{{po.type.name}}</td>
+                          
+                      </tr>
+                    </tbody>
+            </table>
+            </div>
+            <div class="col">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">abilities</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="po in pokemons1.abilities">
+                        <td>{{po.ability.name}}</td>
+                          
+                      </tr>
+                    </tbody>
+            </table>
+            </div>
+            <div class="col">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Games</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="po in pokemons1.game_indices">
+                        <td>{{po.version.name}}</td>
+                          
+                      </tr>
+                    </tbody>
+            </table>
+            </div>
+            <div class="col">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Moves</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="po in pokemons1.moves | filter:busqueda">
+                        <td>{{po.move.name}}</td>
+                          
+                      </tr>
+                    </tbody>
+            </table>
+            </div>
+            <div class="col">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Stats</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="po in pokemons1.stats">
+                        <td>{{po.stat.name}}</td>
+                          
+                      </tr>
+                    </tbody>
+            </table>
+            </div>
+</div>
+
+
+
+											
+    
+                                    

@@ -20,12 +20,20 @@
         <script src="js/lib/angular.1.7.8.min.js"></script>
         <script src="js/lib/angular-route.1.7.8.min.js"></script>
         <script src="js/lib/angular-sanitize.min.js"></script>
-
+        <!-- servicios y providers js/providers/cancionProvider.js tiene que ser antes del app.js-->
+        <script src="js/providers/cancionProvider.js"></script>
         <!-- Nuestros JavaSctipt para la App -->
         <script src="js/app.js"></script>
         <script src="js/config.js"></script>
         <script src="js/promesasController.js"></script>
-        <script src="js/serviciosController.js"></script>
+        <script src="js/serviceController.js"></script>
+        <script src="js/crudController.js"></script>
+        <script src="js/formularioController.js"></script>
+        <script src="js/detalleController.js"></script>
+        <script src="js/pokemonController.js"></script>
+        <script src="js/mainController.js"></script>
+        <script src="js/providers/pokemonProvider.js"></script>
+
 
         <!-- Nuestros Controladores -->
 
@@ -58,7 +66,7 @@
             <div ng-view></div>
 
         </div><!-- /.container -->
-
+<ng-include src="'parciales/footer.html'"></ng-include>
 
         <!-- scripts vendors -->        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

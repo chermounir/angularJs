@@ -54,6 +54,24 @@ angular.
           "url": "#!/servicios",
           "active": false,
           "icono": "fab fa-servicestack"
+        },       
+        {
+          "nombre": "Crud",
+          "url": "#!/crud",
+          "active": false,
+          "icono": "fas fa-server"
+        },       
+        {
+          "nombre": "Formulario",
+          "url": "#!/formulario",
+          "active": false,
+          "icono": "fab fa-wpforms"
+        },       
+        {
+          "nombre": "Pokemon",
+          "url": "#!/pokemon",
+          "active": false,
+          "icono": "fas fa-smile-beam"
         }
       ];
       

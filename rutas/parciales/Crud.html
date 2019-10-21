@@ -1,0 +1,46 @@
+<div  ng-controller="crudController">
+    <componente-alert ng-show="alerta.clase" clase="{{alerta.clase}}" texto="{{alerta.texto}}"></componente-alert>
+    <h2>{{titulo}}</h2>
+    <div class="border p-2 mb-2 bg-light">
+      <input type="text" ng-model="nombre" autofocus placeholder="Nombre de la cancion" size="40">
+      <button ng-click="crear(nombre)" ng-disabled="!nombre" class="btn btn-primary">Crear</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="cancion in canciones">
+          <th scope="row">{{cancion.id}}</th>
+          <td>
+              <input type="text" 
+              ng-model="cancion.nombre" 
+              ng-readonly="!mostrarEditar"
+              class="{{(!mostrarEditar)?'no-editable':''}}">
+       
+
+       <div ng-show="mostrarEditar">                
+           <button ng-click="modificar(cancion.id, cancion.nombre)" class="btn btn-outline-primary">Guardar</button>
+           <button ng-click="mostrarEditar = !mostrarEditar;cancion.nombre = oldNombre" class="btn btn-outline-warning">Cancelar</button>
+       </div>
+            <span ng-click="eliminar(cancion.id)" class="m-3 float-right">
+                <i class="fas fa-trash-alt"></i>
+            </span>
+                <span ng-click="mostrarEditar = !mostrarEdita" class="m-3 float-right">
+                <i class="fas fa-pencil-alt"></i>
+            </span>
+          </td>
+            
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+</div>

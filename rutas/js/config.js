@@ -33,8 +33,21 @@ app.config( function( $routeProvider ){
     .when('/servicios',{
       templateUrl: 'parciales/servicios.html'
     })
+    .when('/crud',{
+      templateUrl: 'parciales/crud.html'
+    })
+    .when('/formulario',{
+      templateUrl: 'parciales/formulario.html'
+    })
+    .when('/detalle/:id',{
+      templateUrl: 'parciales/detalle.html',
+      controller:'detalleController'
+    }).when('/pokemon',{
+      templateUrl: 'parciales/pokemon.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
 
 })
+

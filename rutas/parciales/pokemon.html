@@ -1,0 +1,8 @@
+
+<div class="col" ng-controller="pokemonController"> 
+    <h2>Pokémon data</h2>
+
+    <ul class="list-group">
+        <li ng-repeat="poke in pokemons.results"><a ng-href="#!/detalle/{{poke.name}}">{{poke.name}}</a></li>   
+    </ul>  
+</div>

@@ -70,15 +70,5 @@ var app = angular.module(
     };
 
 
-    $scope.propertyName = 'age';
-    $scope.reverse = true;
-    $scope.friends = orderBy(friends, $scope.propertyName, $scope.reverse);
-  
-    $scope.sortBy = function(propertyName) {
-      $scope.reverse = (propertyName !== null && $scope.propertyName === propertyName)
-          ? !$scope.reverse : false;
-      $scope.propertyName = propertyName;
-      $scope.frutasJson = orderBy(frutasJson, $scope.propertyName, $scope.reverse);
-    };
     }]);
 // end frutasController

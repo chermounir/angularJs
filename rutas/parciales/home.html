@@ -1,5 +1,20 @@
-<h1>Home</h1>
+<h2>Ejercicios</h2>
+<ul>
+    <li><a href="ejercicios/ejercicio1/index.html" target="_blank">ejercicio1</a></li>
+    <li><a href="ejercicios/ejercicio2/index.html" target="_blank">ejercicio2</a></li>
+    <li><a href="ejercicios/ejercicioComponentes/index.html" target="_blank">ejercicio Componentes</a></li>
+    <li><a href="ejercicios/ejercicioCrudTareas/index.html" target="_blank">ejercicio Crud Tareas</a></li>
+    <li><a href="ejercicios/Ejerciciohttp%20request/index.html" target="_blank">ejercicio httpRequest</a></li>
+    <li><a href="ejercicios/evaluacion1/index.html" target="_blank">evaluacion1</a></li>
+    <li><a href="ejercicios/frutasJson/index.html" target="_blank">frutasJson</a></li>
+</ul>
+<h2>Documentacion</h2>
+<ul>
+    <li><a href="" target="_blank">Documentacion oficial</a></li>
+    <li><a href="https://www.cursoangularjs.es/" target="_blank">Curso Angulas js</a></li>
+</ul>
 
+<h2>Configurando Ruting</h2>
 <p>Pasos para montar el sistema de Routing de AngularJS</p>
 <ol>
     <li>Descargar e incluir en <b>index.html</b> la libreria <code>angular.route.js</code></li>
@@ -29,3 +44,15 @@
           
           })
 </code></pre>
+<h3>Ejemplo Ruta con parametros</h3>
+<p>mirar fichero de configuracion de rutas</p>
+<p></p>
+<ul>
+    <li><a ng-href="#!/detalle/3">Detale Registro 3</a></li>
+    <li><a ng-href="#!/detalle/3">Detale Registro 11</a></li>
+</ul>
+<h3>filtro personalizado</h3>
+Crear un nuevo filtro es casi tan sencillo como crear una función a la que le pasamos un valor y ésta retorna el nuevo valor con el filtro aplicado.
+<h4>Ejemplo:</h4>
+<div>{{ "hola mundo" | capitalizar }}</div>
+<div>{{ "hoy es viernes" | capitalizarCacho :7 :10 }}</div>
