@@ -18,9 +18,6 @@ app.config( function( $routeProvider ){
     .when('/frutas',{
         template: '<componente-frutas></componente-frutas>'
     })
-    .when('/creditos',{
-      templateUrl: 'parciales/creditos.html'
-    })
     .when('/filter-map-reduce',{
       template: '<componente-javascript></componente-javascript>'
     })

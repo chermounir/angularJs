@@ -3,7 +3,8 @@
 
 <div class="border p-2 mb-2 bg-light">
     <h2>Filtro por Color</h2>
-    <select class="form-control" ng-model="color">
+    <select class="form-control" ng-model="busqueda.color">
+        <option value="">Todos</option>
         <option value="verde">verde</option>
         <option value="amarillo">Amarillo</option>
         <option value="marron">Marron</option>
@@ -11,7 +12,7 @@
 </div>
 
 <div class="border p-2 mb-2 bg-light">
-    <h2>Filtro</h2>
+    <h2>Filtro por nombre</h2>
     <i class="fas fa-search"></i>  <input type="text" ng-model="busqueda.nombre"  placeholder="Nombre de la fruta" size="40">
     </div>
 <h2>Listado de frutas</h2>
@@ -36,7 +37,18 @@
 <div class="border p-2 mb-2 bg-light">
 <button class="btn btn-primary" ng-click="anteriores()">Anteriores</button>
 <button class="btn btn-primary" ng-click="siguientes()">Siguientes</button>
+</div>
+<br>
+<div class="border p-2 mb-2 bg-light">
+<h3>Ejemplos de filtros con javascript:</h3>
+<h5>map</h5>
+<code>$scope.colores  = response.data.map(e=>e.color);</code>
 {{colores}}
+<h5>filter + map</h5>
+<code>$scope.nombr2e  = response.data.filter(e=>e.precio>2).map(e=>e.nombre);</code>
 {{nombr2e}}
+<h5>map + reduce</h5>
+<code>$scope.totalEuros  = response.data.map(e=>e.precio).reduce((pv,cv)=> pv+cv);</code>
 {{totalEuros}}
+
 </div>

@@ -26,12 +26,6 @@ angular.
           "icono": "fas fa-window-restore"
         },       
         {
-          "nombre": "Creditos",
-          "url": "#!/creditos",
-          "active": false,
-          "icono": "fab fa-creative-commons"
-        },       
-        {
           "nombre": "Filter, Map, Reduce",
           "url": "#!/filter-map-reduce",
           "active": false,

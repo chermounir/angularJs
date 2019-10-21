@@ -13,6 +13,7 @@ angular.
       $scope.colores ={};
       $scope.nombr2e =[];
       $scope.totalEuros =0;
+      $scope.posicion=2;
       let url = 'http://localhost:3000/frutas';
       $http.get(url)
                   .then(function(response){   // success antiguo

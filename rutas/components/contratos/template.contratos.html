@@ -1,22 +1,65 @@
-<h1>Contratos</h1>
-<div class="row">
-    <div class="rol">
-            <h2>Ejercicio Real con Contratos</h2>
-           
-<br>
-            <p>Para poder  jugar con filter y map se se puede pedir que:</p>
-            <ol>
-                <li>Obtengan todos los contratos cuyo campo TIPPRODUCT tenga un valor determinado, por ejemplo “KT” (filter)</li>
-                {{contratosTipProduct}}
-                <li>Obtengan un nuevo array en el que cada elemento contenga el código de contrato concatenado con el digito de control (campos codCONTRAT y digContrat), además del saldo en euros (campo SALCONTRAT dividido entre 100) (map)</li>
-                {{nuevoArrayContratos}}
-                <li>Obtengan todos los contratos que en su campo acciones contengan la clave “SITUACION” (filter por la subestructura)</li>
-                {{contratosSituacion}}
-                <li>Obtengan un array que contenga todas las acciones posibles (map y spread)</li>
-                <li>Combinaciones de las anteriores, etc</li>
-            </ol>	
+<h2>{{titulo}}</h2>
+        <p>Numero de Contratos <b>{{contratos.length}}</b></p>
+        <p>Tipos de Producto <b>{{tiposProductos.length}}</b> {{tiposProductos}}</p>
+        
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    TIPPRODUCT = “KT” (filter)  <b>{{ejercicio1.length}}</b>
+                    </button>
+                </h2>
+                </div>
             
-            <p class="text-danger">En todo lo anterior no pueden usar bucles for ni foreach, por supuesto </p>      
-    </div>
-</div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    {{contratosTipProduct}}
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    contratos mapeados   {{nuevoArrayContratos.length}}
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    {{nuevoArrayContratos}}
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Contratos con una ACCION.clave = "SITUACION"  {{contratosSituacion.length}}
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    {{contratosSituacion}}
+                </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#headingFour" aria-expanded="false" aria-controls="headingFour">
+                    Obtengan un array que contenga todas las acciones posibles (map y spread)
+                    </button>
+                </h2>
+                </div>
+                <div id="headingFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    {{allAcciones}}
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- /accordion-->
 
