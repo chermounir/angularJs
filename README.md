@@ -5,10 +5,12 @@
 			<h3>Ejercicios</h3>
 			<ul>
 				<li>
-			     ejercicio1:
-				 <ul>
-					<li>Filtros:uppercase, lowercasee, date, numbre, currency.</li>
-				    <li>Directiva ng-model</li>
+					ejercicio1:
+					<ul>
+						<li>Filtros: uppercase, lowercasee, date, numbre, currency.</li>
+						<li>Directiva ng-model</li>
+					</ul>
+					
 				</li>
 				<li>ejercicio2:Directiva ng-repeat</li>
 				<li>ejercicio Componentes:Crear componentes básicos</li>
