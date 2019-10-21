@@ -28,13 +28,15 @@ ejercicio1:
 
 </ul>
 <h2>Frutas:</h2>
-filtrar una tabla de frutas por nombre y color + paginacion
+<ul>
+<li>filtrar una tabla de frutas por nombre y color + paginacion</li>
+<li>Ejemplos de filtros con javascripte (Filter, Map, Reduce)</li>
+ </ul>
 <h2>Componentes</h2>
     <ul>
         <li>Ejemplo Componente desde HTML</li>
         <li>Ejemplo Componente enlazado desde una Ruta</li>
     </ul>
-<h2>Creditos</h2>
 <h2>Filter, Map, Reduce:</h2>
 <ul>
     filtros javascript con los métodos :
