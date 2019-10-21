@@ -29,7 +29,7 @@ ejercicio1:
 </ul>
 <h2>Frutas:</h2>
 <ul>
-<li>filtrar una tabla de frutas por nombre y color + paginacion</li>
+<li>filtrar tabla frutas por nombre y color + paginacion</li>
 <li>Ejemplos de filtros con javascripte (Filter, Map, Reduce)</li>
  </ul>
 <h2>Componentes</h2>
