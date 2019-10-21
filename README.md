@@ -1,6 +1,6 @@
 # angularJs
 <h2>Inicio:</h2>
-	
+	<ul>
 		<li>
 			<h3>Ejercicios</h3>
 			<ul>
@@ -9,7 +9,7 @@
 				    <ul>
 					    <li>Filtros:uppercase, lowercasee, date, numbre, currency.</li>
                         <li>Directiva ng-model</li>
-				    </ul>
+		       </ul>
 					
 				</li>
 				<li>ejercicio2:Directiva ng-repeat</li>
