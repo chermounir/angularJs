@@ -1,5 +1,5 @@
 # angularJs
-Inicio:
+<h2>Inicio:</h2>
        Ejercicios
 			ejercicio1:
 				Filtros:uppercase, lowercasee, date, numbre, currency.
